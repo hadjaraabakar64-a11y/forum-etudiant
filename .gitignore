@@ -1,0 +1,13 @@
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+*.sqlite3
+**/node_modules/
+**/dist/
+**/staticfiles/
+backend/media/
+backend/captures/
+.env
+.env.*
+!.env.example
