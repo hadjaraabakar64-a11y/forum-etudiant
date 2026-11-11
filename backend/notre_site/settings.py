@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+import os
 SECRET_KEY = os.environ.get("SECRET_KEY", "development-only-change-me")
 DEBUG = os.environ.get("DEBUG", "True").lower() == "true"
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get(
@@ -84,7 +85,7 @@ WSGI_APPLICATION = 'notre_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
-import os
+
 import dj_database_url
 if os.environ.get("DATABASE_URL"):
     DATABASES = {"default": dj_database_url.config(
